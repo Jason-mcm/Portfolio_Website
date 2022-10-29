@@ -23,10 +23,6 @@
     "footer-area footer-area footer-area footer-area";
 }
 
-#content > * {
-    /*border: 1px solid red;*/
-}
-
 /*
 Header
  */
@@ -48,6 +44,8 @@ header {
 .icon {
     display: none;
     color: var(--clr-primary);
+    padding: 0 1% 0 1%;
+    font-size: 14pt;
 }
 
 .nav-item {
@@ -71,9 +69,36 @@ header {
     margin-right: auto;
 }
 
-@media screen and (max-width: 600px) {
-    .nav-container button:not(:first-child) {display: none;}
-    .nav-container .icon {display: block;}
+@media screen and (max-width: 768px) {
+    .nav-container .nav-item:not(:first-child) {display: none;}
+    .nav-container {
+        display: flex;
+        align-items: flex-end;
+        padding: 1vh;
+    }
+    .nav-container .icon {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-container.responsive {position: relative;}
+    .nav-container.responsive {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 1vh;
+    }
+    .nav-container.responsive .nav-item {
+        display: flex;
+        padding: .75vh;
+    }
+    .nav-container.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
 }
 /*End Header*/
 
@@ -99,15 +124,22 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /*border-radius: 50%;*/
 }
 
 .profile-photo img {
     border-radius: 50%;
     box-shadow: 5px 5px 5px ;
     height: 30vh;
+}
 
+.figure {
+    background-color: var(--clr-primary);
+}
 
+@media screen and (max-width: 768px) {
+    .profile-photo {
+        margin: 2vh;
+    }
 }
 
 aside {
@@ -116,40 +148,44 @@ aside {
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    font-size: 20pt;
+    font-size: 4vh;
     font-weight: bold;
     color: var(--clr-primary);
     height: 10vh;
 }
 
-
 section {
     grid-area: section-area;
     display: flex;
     justify-content: space-between;
-    /*align-items: center;*/
     margin: 10px;
     height: 42vh;
-
 }
 
 section div {
     color: var(--clr-primary);
-    font-size: 16pt;
-    padding: 10px;
-    margin: 10px;
-    flex: 1;
+    font-size: 2vh;
+    padding: 1vh;
+    margin: 1vh;
+    flex: 1 1 0;
     border: 1px solid var(--clr-primary);
     box-shadow: 10px 10px 5px var(--clr-primary);
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .skills li {
-    font-size: 16pt;
+    font-size: 2vh;
     list-style: none;
     margin-left: 25px;
 }
+/*END HOME*/
 
-
+/*
+FOOTER
+ */
 footer {
     grid-area: footer-area;
     border-top: 1px solid var(--clr-primary);
@@ -163,14 +199,11 @@ footer {
 
 .footer-container li {
     list-style: none;
-    /*background-color: var(--clr-primary);*/
 }
 
 .footer-container a {
     text-decoration: none;
     color: var(--clr-primary);
-    /*background-color: var(--clr-primary);*/
-    /*color: var(--clr-secondary)*/
 }
 
 .footer-container a:hover {
@@ -187,16 +220,10 @@ footer p {
     text-align: center;
     padding-bottom: 5px;
 }
-
-
-
-
-/*.nav-item:nth-child(2) {*/
-/*    border-bottom: 3px solid var(--clr-primary);*/
-/*}*/
+/*END FOOTER*/
 
 /*
-Primary button style
+PRIMARY BUTTON STYLE
  */
 .btn-primary {
     color: var(--clr-secondary);
@@ -221,7 +248,7 @@ Primary button style
 }
 
 /*
-Resume
+RESUME
  */
 #resume {
     display: none;
@@ -232,13 +259,15 @@ Resume
 .resume-container {
     display: grid;
     height: 100vh;
+    overflow: scroll;
 }
 
 .resume-headers {
     font-size: 20px;
     font-weight: bold;
-    border-bottom: 1px solid black;
-    padding: 5px 5px;
+    border-bottom: 1px solid var(--clr-primary);
+    padding: 0 5px;
+    margin-bottom: 0;
 }
 
 .job-title {
@@ -387,7 +416,7 @@ Contact
     grid-template-areas:
     "reach-out reach-out"
     "info info";
-    /*height: 100vh;*/
+    overflow: scroll;
 
 }
 
@@ -398,12 +427,6 @@ Contact
     display: flex;
     justify-content: center;
     align-items: center;
-    /*font-size: 36pt;*/
-    /*font-weight: bold;*/
-    /*color: linear-gradient(180deg, var(--clr-primary) 50%, var(--clr-primary) 50%);*/
-    /*color: #173645;*/
-
-
 }
 
 .reach-out p {
@@ -423,6 +446,7 @@ Contact
     justify-content: space-evenly;
     align-items: center;
     color: var(--clr-primary);
+    overflow: scroll;
 }
 
 .contact-info div {
