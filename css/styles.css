@@ -161,6 +161,18 @@ section {
     margin: 10px;
     height: 42vh;
 }
+ @media screen and (max-width: 768px) {
+     section {
+         display: flex;
+         flex-direction: column;
+         margin: 1vh;
+         height: 65vh;
+     }
+     section div {
+         margin: 1vh;
+         font-size: 3vh;
+     }
+ }
 
 section div {
     color: var(--clr-primary);
