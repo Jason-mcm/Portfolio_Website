@@ -407,12 +407,16 @@ About
 
 .about-item4 {
     grid-area: four;
-    height: 45vh;
-    background: url("../img/DSC_0232.jpg") center center;
-    background-size: cover;
+    display: flex;
+    width: 100%;
+    height: 100%;
     box-shadow: 7px 7px 5px var(--clr-primary);
 }
 
+.about-item4 iframe {
+    display: flex;
+    flex-grow: 1;
+}
 
 /*
 Contact
