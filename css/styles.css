@@ -1,3 +1,6 @@
+/*
+Create color variables and global css
+ */
 :root {
     --clr-primary: #173645;
     --clr-primary-hover: #a5b0b5;
@@ -11,9 +14,11 @@
     font-size: 12pt;
     background-color: var(--clr-secondary);
     font-family: Montserrat, sans-serif;
-
 }
 
+/*
+Overall Layout
+ */
 #content{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -102,6 +107,9 @@ header {
 }
 /*End Header*/
 
+/*
+Set main content to 90 vh so page is always full
+ */
 #main-content {
     grid-area: main-content;
     min-height: 90vh;
@@ -193,10 +201,10 @@ section div {
     list-style: none;
     margin-left: 25px;
 }
-/*END HOME*/
+/*End Home*/
 
 /*
-FOOTER
+Footer
  */
 footer {
     grid-area: footer-area;
@@ -232,10 +240,10 @@ footer p {
     text-align: center;
     padding-bottom: 5px;
 }
-/*END FOOTER*/
+/*End Footer*/
 
 /*
-PRIMARY BUTTON STYLE
+Primary Button Style
  */
 .btn-primary {
     color: var(--clr-secondary);
@@ -260,7 +268,7 @@ PRIMARY BUTTON STYLE
 }
 
 /*
-RESUME
+Resume
  */
 #resume {
     display: none;
@@ -313,13 +321,6 @@ RESUME
 /*End Resume*/
 
 /*
-Projects
- */
-#projects {
-    display: none;
-}
-
-/*
 About
  */
 #about {
@@ -336,20 +337,13 @@ About
     grid-gap: 1vh;
 }
 
-.about-container > * {
-    /*border: 1px solid red;*/
-
-}
-
 .about-item1 {
     grid-area: one;
     height: 45vh;
     background: url("../img/IMG_5730.jpeg") center center;
     background-size: cover;
     box-shadow: 7px 7px 5px var(--clr-primary);
-
 }
-
 
 .about-item2 {
     grid-area: two;
@@ -360,7 +354,6 @@ About
     justify-content: center;
     padding: 3vh;
     font-size: 2vh;
-
 }
 
 .about-item3 {
@@ -372,36 +365,28 @@ About
     grid-gap: 1vh;
 }
 
-.about-item3 > * {
-    /*border: 1px solid deeppink;*/
-}
-
 .mini-grid1 {
     background: url("../img/IMG_1665.jpeg") center center;
     background-size: cover;
     box-shadow: 7px 7px 5px var(--clr-primary);
-
 }
 
 .mini-grid2 {
     background: url("../img/IMG_3097.jpeg") center center;
     background-size: cover;
     box-shadow: 7px 7px 5px var(--clr-primary);
-
 }
 
 .mini-grid3 {
     background: url("../img/IMG_2591.jpeg") center center;
     background-size: cover;
     box-shadow: 7px 7px 5px var(--clr-primary);
-
 }
 
 .mini-grid4 {
     background: url("../img/IMG_2210.jpeg") center center;
     background-size: cover;
     box-shadow: 7px 7px 5px var(--clr-primary);
-
 }
 
 
@@ -417,6 +402,7 @@ About
     display: flex;
     flex-grow: 1;
 }
+/*End About*/
 
 /*
 Contact
@@ -433,7 +419,6 @@ Contact
     "reach-out reach-out"
     "info info";
     overflow: scroll;
-
 }
 
 .reach-out {
@@ -466,5 +451,6 @@ Contact
 }
 
 .contact-info div {
-    font-size: 25pt;
+    font-size: 3vh;
 }
+/*End Contact*/
