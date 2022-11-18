@@ -18,7 +18,7 @@
     <title>Jason McMillan</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
     <script src="https://kit.fontawesome.com/1a446476cb.js" crossorigin="anonymous"></script>
-    <script src="circletype.min.js"></script>
+<!--    <script src="circletype.min.js"></script>-->
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js"></script>
 </head>
@@ -33,7 +33,8 @@
                 Jason McMillan
             </li>
             <li class="nav-item">
-                <button class="nav-button" onclick="home()"><i class="fa-solid fa-house"></i> Home</button>
+                <button class="nav-button" onclick="home()"><i
+                        class="fa-solid fa-house"></i> Home</button>
             </li>
             <li class="nav-item">
                 <button class="nav-button" onclick="resume()"><i class="fa-solid fa-file"></i> Resume</button>
@@ -280,14 +281,24 @@
         <ul class="footer-container">
             <li class="footer-item">
                 <!--                <button class="navButton" onclick="home()"><i class="fa-solid fa-house"></i> LinkedIn</button>-->
-                <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.linkedin.com/in/jason-mcmillan-3259a520b/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i> LinkedIn</a>
             </li>
             <li class="footer-item">
                 <!--                <button class="navButton" onclick="resume()"><i class="fa-solid fa-file"></i> GitHub</button>-->
-                <a href="resume.html"><i class="fa-brands fa-github"></i></i> GitHub</a>
+                <a href="https://github.com/Jason-mcm" target="_blank"><i class="fa-brands fa-github"></i></i> GitHub</a>
             </li>
             <li class="footer-item">
                 <button class="btn-primary" onclick="contact()"><i class="fa-solid fa-address-card"></i> Contact</button>
+            </li>
+<!--            <li class="footer-item" id="theme-slider" onclick="changeTheme('css/theme.css')">-->
+<!--                <a href="#">Change Theme</a>-->
+<!--            </li>-->
+            <li class="footer-item">
+                <label class="switch" id="theme-slider">
+                    <input type="checkbox" onclick="changeTheme('css/theme.css')">
+                    <span class="slider round"></span>
+                </label>
             </li>
         </ul>
         <p>Site Created by Jason McMillan</p>

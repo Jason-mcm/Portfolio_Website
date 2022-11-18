@@ -1,0 +1,151 @@
+:root {
+    --clr-primary: #FFFFFF;
+    --clr-primary-hover: #C84B31;
+    --clr-secondary: #121212;
+    --clr-overlay: #363333;
+    --clr-accent: #2D4263;
+}
+
+* {
+    background-color: var(--clr-secondary);
+}
+
+#main-content {
+    margin-bottom: 0;
+}
+
+/*
+Header
+ */
+.nav-container {
+    background-color: var(--clr-overlay);
+    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+    /*position: static;*/
+}
+
+.nav-item {
+    background-color: var(--clr-overlay);
+}
+
+.nav-button {
+    background-color: var(--clr-overlay);
+}
+
+/*
+Home
+ */
+#home {
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "main aside aside aside"
+        "main aside aside aside"
+        "main section section section"
+        "main section section section";
+
+}
+
+/* profile photo */
+main {
+    grid-area: main;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 3px solid var(--clr-primary-hover);
+    background-color: var(--clr-accent);
+
+}
+
+.profile-photo {
+    background: linear-gradient(180deg, var(--clr-accent) 50%, var(--clr-accent) 50%);
+}
+
+.profile-photo img {
+    border-radius: 0;
+    height: 35vh;
+}
+
+/*aside text */
+aside {
+    grid-area: aside;
+    height: 30vh;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 2vh;
+    font-size: 6vh;
+}
+
+aside:after {
+    display: block;
+    content: "std::cout << \"Hi, my name is Jason McMillan. I am a software engineer and I like to code and create cool stuff!\" << std::endl;";
+    font-size: 1vh;
+    padding-left: .6vh;
+    color: var(--clr-primary-hover);
+    text-transform: none;
+}
+
+section {
+    /*order: 2;*/
+    grid-area: section;
+    height: 60vh;
+    flex-direction: column;
+}
+
+section div {
+    background-color: var(--clr-overlay);
+    border: none;
+    box-shadow: 10px 10px 5px black;
+}
+
+.skills ul {
+    background-color: var(--clr-overlay);
+}
+
+.skills ul li {
+    background-color: var(--clr-overlay);
+}
+
+/*
+Footer
+ */
+footer {
+    border-top: 3px solid var(--clr-primary-hover);
+}
+
+/*
+Resume
+ */
+.resume-headers {
+    border-bottom: 1px solid var(--clr-primary-hover);
+}
+
+/*
+About
+ */
+.about-item1 {
+    box-shadow: 7px 7px 5px var(--clr-accent);
+}
+
+.mini-grid1 {
+    box-shadow: 7px 7px 5px var(--clr-accent);
+}
+
+.mini-grid2 {
+    box-shadow: 7px 7px 5px var(--clr-accent);
+}
+
+.mini-grid3 {
+    box-shadow: 7px 7px 5px var(--clr-accent);
+}
+
+.mini-grid4 {
+    box-shadow: 7px 7px 5px var(--clr-accent);
+}
+
+.about-item4 {
+    box-shadow: 7px 7px 5px var(--clr-accent);
+}
