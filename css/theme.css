@@ -100,10 +100,10 @@ main {
     section div {
         overflow: scroll;
         margin: 1vh;
-        font-size: 3vh;
+        font-size: 2vh;
     }
-    section ul li {
-        font-size: 3vh;
+    .skills li {
+        font-size: 2vh;
     }
 }
 /*aside text */
