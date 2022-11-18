@@ -1,3 +1,21 @@
+/*
+Change Log:
+Changed root colors
+Added accent color
+Completely changed home page layout using grid
+Added content to aside in home page
+Added accent color to main
+Added accent color border
+changed flexbox layout, aside, section
+added accent color border to resume page
+changed box shadow color on about page
+completely changed contact page layout using grid
+changed color of background
+changed color of text for contact me
+changed flexbox layout for contact info
+ */
+
+
 :root {
     --clr-primary: #FFFFFF;
     --clr-primary-hover: #C84B31;
@@ -35,8 +53,6 @@ Header
 Home
  */
 #home {
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
@@ -44,7 +60,6 @@ Home
         "main aside aside aside"
         "main section section section"
         "main section section section";
-
 }
 
 /* profile photo */
@@ -68,6 +83,25 @@ main {
     height: 35vh;
 }
 
+@media screen and (max-width: 768px) {
+    #home {
+        grid-template-areas:
+            "aside aside aside aside"
+            "section section section section"
+            "section section section section"
+            "main main main main";
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+        margin: 1vh;
+        height: 65vh;
+    }
+    section div {
+        margin: 1vh;
+        font-size: 3vh;
+    }
+}
 /*aside text */
 aside {
     grid-area: aside;
@@ -148,4 +182,31 @@ About
 
 .about-item4 {
     box-shadow: 7px 7px 5px var(--clr-accent);
+}
+
+/*
+Contact
+ */
+.contact-container {
+    grid-template-areas:
+        "reach-out info"
+        "reach-out info";
+    margin: 0;
+}
+
+.reach-out {
+    background: linear-gradient(180deg, var(--clr-accent) 50%, var(--clr-accent) 50%);
+    height: 90vh;
+    border-right: 3px solid var(--clr-primary-hover);
+}
+
+.reach-out p {
+    background: -webkit-linear-gradient(90deg, var(--clr-primary-hover) 50%, var(--clr-primary-hover) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-info {
+    height: 90vh;
+    justify-content: center;
 }
