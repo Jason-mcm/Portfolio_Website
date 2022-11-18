@@ -98,7 +98,11 @@ main {
         height: 65vh;
     }
     section div {
+        overflow: scroll;
         margin: 1vh;
+        font-size: 3vh;
+    }
+    section ul li {
         font-size: 3vh;
     }
 }
