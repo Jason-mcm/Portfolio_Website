@@ -214,3 +214,7 @@ Contact
     height: 90vh;
     justify-content: center;
 }
+
+.slider:before {
+    background-color: var(--clr-secondary);
+}
