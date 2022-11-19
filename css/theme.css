@@ -13,6 +13,8 @@ completely changed contact page layout using grid
 changed color of background
 changed color of text for contact me
 changed flexbox layout for contact info
+added media queries to make responsive for mobile and tablet
+making slider look better when theme is applied
  */
 
 
@@ -154,6 +156,11 @@ footer {
     border-top: 3px solid var(--clr-primary-hover);
 }
 
+.slider:before {
+    background-color: var(--clr-secondary);
+}
+
+
 /*
 Resume
  */
@@ -215,6 +222,10 @@ Contact
     justify-content: center;
 }
 
-.slider:before {
-    background-color: var(--clr-secondary);
+@media screen and (max-width: 768px) {
+    .contact-container {
+        grid-template-areas:
+            "reach-out reach-out"
+            "info info";
+    }
 }
