@@ -545,3 +545,7 @@ Contact page styles
     font-size: 3vh;
 }
 /*End Contact*/
+
+.slider-label {
+    color: var(--clr-primary);
+}
