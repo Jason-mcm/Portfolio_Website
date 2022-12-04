@@ -21,6 +21,7 @@
 <!--    <script src="circletype.min.js"></script>-->
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js"></script>
+    <script src="js/validate.js"></script>
 </head>
 
 <body>
@@ -39,9 +40,9 @@
             <li class="nav-item">
                 <button class="nav-button" onclick="resume()"><i class="fa-solid fa-file"></i> Resume</button>
             </li>
-            <!--                <li class="nav-item">-->
-            <!--                    <button class="nav-button" onclick="projects()"><i class="fa-solid fa-bug"></i> Projects</button>-->
-            <!--                </li>-->
+            <li class="nav-item">
+                <button class="nav-button" onclick="logVisit()"><i class="fa-solid fa-user"></i> Log Visit</button>
+            </li>
             <li class="nav-item">
                 <button class="nav-button" onclick="about()"><i class="fa-solid fa-circle-question"></i> About
                 </button>
@@ -236,6 +237,104 @@
         <!--            <div id="projects">-->
         <!--                projects-->
         <!--            </div>-->
+
+        <!-- LOG VISIT -->
+        <div id="log-visit">
+            <div id="formId" class="form">
+                <form action="#" novalidate>
+                    <ul class="wrapper">
+                        <div class="left">
+                            <li class="form-row">
+                                <label for="first-name">First</label>
+                                <input type="text" id="first-name" name="first-name" placeholder="John"
+                                      required>
+                            </li>
+
+                            <li class="form-row">
+                                <label for="last-name">Last</label>
+                                <input type="text" id="last-name" name="last-name" placeholder="Doe" required>
+                            </li>
+
+                            <li class="form-row">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" name="address" placeholder="123 Main Street" required>
+                            </li>
+
+                            <li class="form-row">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" placeholder="Provo" required>
+                            </li>
+
+                            <li class="form-row">
+                                <label for="state">State</label>
+                                <input type="text" id="state" name="state" placeholder="UT" min="2" max="2" required>
+                            </li>
+
+                            <li class="form-row">
+                                <label for="zip">Zip</label>
+                                <input type="text" id="zip" name="zip" placeholder="90210" pattern="[0-9]{5}-?[0-9]{4}?" required>
+                            </li>
+
+                            <li class="form-row">
+                                <label for="cell">Cell</label>
+                                <input type="text" id="cell" name="cell" placeholder="123456789" pattern="[0-9]{9}" required>
+                            </li>
+
+                            <li class="form-row">
+                                <label for="email">Email</label>
+                                <input type="text" id="email" name="email" placeholder="example@email.com"> <!-- Add pattern -->
+                            </li>
+                        </div>
+
+                        <div class="right">
+                            <li class="form-row">
+                                <p id="find">How did you find my page? </p>
+                            </li>
+
+                            <li class="form-row">
+                                <label for="internet">Internet </label>
+                                <input type="checkbox" id="internet" name="check">
+                            </li>
+
+                            <li class="form-row">
+                                <label for="friend">Friend </label>
+                                <input type="checkbox" id="friend" name="check">
+                            </li>
+
+                            <li class="form-row">
+                                <label for="res">Resume </label>
+                                <input type="checkbox" id="res" name="check">
+                            </li>
+
+                            <li class="form-row">
+                                <label for="other">Other </label>
+                                <input type="checkbox" id="other" name="check">
+                            </li>
+
+                            <li class="form-row">
+                                <textarea name="comments" id="comments" cols="30" rows="10"
+                                          placeholder="Additional comments..."></textarea>
+                            </li>
+
+<!--                            <li class="form-row">-->
+<!--                                <input type="submit" id="submitBtn">-->
+<!--                            </li>-->
+                        </div>
+                    </ul>
+                </form>
+                <div class="submit-wrapper">
+                    <input type="submit" id="submitBtn">
+                </div>
+
+                <ul id="errors"></ul>
+
+            </div>
+            <div id="thank-you">
+                <div class="thank-you-wrapper">
+                    Thank you for visiting my website!
+                </div>
+            </div>
+        </div>
 
         <!-- ABOUT -->
         <div id="about">

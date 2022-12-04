@@ -3,38 +3,42 @@ var themeSet = false;
 function home() {
     var homeElement = document.getElementById("home");
     let resumeElement = document.getElementById("resume");
-    // let projectsElement = document.getElementById("projects");
+    let visitElement = document.getElementById("log-visit");
     let aboutElement = document.getElementById("about");
     let contactElement = document.getElementById("contact");
-    // let exists = false;
-    // for (const sheet of document.styleSheets) {
-    //     if (sheet.href.includes("theme.css")) {
-    //         exists = true;
-    //         break;
-    //     }
-    // }
     if (themeSet) {
         homeElement.style.display = "grid";
     } else {
         homeElement.style.display = "block";
     }
-    // homeElement.style.display = "block";
     resumeElement.style.display = "none";
-    // projectsElement.style.display = "none";
+    visitElement.style.display = "none"
     aboutElement.style.display = "none";
     contactElement.style.display = "none";
-
 }
 
 function resume() {
     let homeElement = document.getElementById("home");
     let resumeElement = document.getElementById("resume");
-    // let projectsElement = document.getElementById("projects");
+    let visitElement = document.getElementById("log-visit");
     let aboutElement = document.getElementById("about");
     let contactElement = document.getElementById("contact");
     homeElement.style.display = "none";
     resumeElement.style.display = "block";
-    // projectsElement.style.display = "none";
+    visitElement.style.display = "none"
+    aboutElement.style.display = "none";
+    contactElement.style.display = "none";
+}
+
+function logVisit(){
+    let homeElement = document.getElementById("home");
+    let resumeElement = document.getElementById("resume");
+    let visitElement = document.getElementById("log-visit");
+    let aboutElement = document.getElementById("about");
+    let contactElement = document.getElementById("contact");
+    homeElement.style.display = "none";
+    resumeElement.style.display = "none";
+    visitElement.style.display = "block"
     aboutElement.style.display = "none";
     contactElement.style.display = "none";
 }
@@ -42,12 +46,12 @@ function resume() {
 function about() {
     let homeElement = document.getElementById("home");
     let resumeElement = document.getElementById("resume");
-    // let projectsElement = document.getElementById("projects");
+    let visitElement = document.getElementById("log-visit");
     let aboutElement = document.getElementById("about");
     let contactElement = document.getElementById("contact");
     homeElement.style.display = "none";
     resumeElement.style.display = "none";
-    // projectsElement.style.display = "none";
+    visitElement.style.display = "none"
     aboutElement.style.display = "block";
     contactElement.style.display = "none";
 }
@@ -55,12 +59,12 @@ function about() {
 function contact() {
     let homeElement = document.getElementById("home");
     let resumeElement = document.getElementById("resume");
-    // let projectsElement = document.getElementById("projects");
+    let visitElement = document.getElementById("log-visit");
     let aboutElement = document.getElementById("about");
     let contactElement = document.getElementById("contact");
     homeElement.style.display = "none";
     resumeElement.style.display = "none";
-    // projectsElement.style.display = "none";
+    visitElement.style.display = "none"
     aboutElement.style.display = "none";
     contactElement.style.display = "block";
 }
@@ -99,5 +103,5 @@ function changeTheme(href, onoff) {
             themeSet = false;
         }
     }
-    return onoff
+    return onoff;
 }
